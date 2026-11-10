@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Switchboard",
+  "version": "0.6.0",
+  "description": "A side panel for claude.ai that sorts your Cowork tasks and chats by what they need from you, and switches between them in the same tab.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://claude.ai/*"],
+  "content_scripts": [
+    { "matches": ["https://claude.ai/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+}
